@@ -1,0 +1,34 @@
+/* Design tokens. Light by default, dark via prefers-color-scheme.
+   `accent` is the single brand color. No semantic (owe/error) colors needed here.
+   Sketches stroke with `currentColor`, so they inherit `--color-text`. */
+
+:root {
+  --color-bg: #f7f6f2;
+  --color-surface: #ffffff;
+  --color-text: #1f2a24;
+  --color-muted: #5d6b63;
+  --color-border: #d8dcd5;
+  --color-accent: #2f7d52;
+  --color-accent-contrast: #ffffff;
+
+  --radius: 12px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --tap-target: 44px;
+  --content-max: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #14181a;
+    --color-surface: #1e2426;
+    --color-text: #e8ece8;
+    --color-muted: #9fb0a6;
+    --color-border: #323a3a;
+    --color-accent: #5fb985;
+    --color-accent-contrast: #0e1311;
+  }
+}
