@@ -301,7 +301,7 @@ export const urbanSpecies: Species[] = [
     traits: {
       leaf: ['simple'], margin: ['n-a'], arrangement: ['alternate'],
       persistence: ['evergreen'], fruit: ['drupe'], bark: ['fissured'],
-      habit: ['palm'], leafShape: ['palmate'],
+      habit: ['palm'], leafShape: ['n-a'],
     },
     distinctiveNotes: 'Palmera muy alta y delgada con hojas en abanico (palmeadas) y pecíolos de borde espinoso. Conserva una falda de hojas secas colgantes; pequeños frutos negruzcos.',
   },
@@ -311,7 +311,7 @@ export const urbanSpecies: Species[] = [
     traits: {
       leaf: ['simple'], margin: ['n-a'], arrangement: ['alternate'],
       persistence: ['evergreen'], fruit: ['drupe'], bark: ['fissured', 'flaking'],
-      habit: ['palm'], leafShape: ['palmate'],
+      habit: ['palm'], leafShape: ['n-a'],
     },
     distinctiveNotes: 'Única palmera autóctona europea; pequeña y a menudo multicaule en mata. Hojas en abanico rígidas con pecíolos muy espinosos; frutos pardos no comestibles.',
   },
