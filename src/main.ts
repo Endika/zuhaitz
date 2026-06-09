@@ -1,4 +1,5 @@
 import './styles/app.css';
+import { registerSW } from 'virtual:pwa-register';
 import { dataset } from './data/dataset';
 import { createSession } from './engine/session';
 import { mount } from './ui/dom';
@@ -58,3 +59,7 @@ function render(): void {
 
 window.addEventListener('hashchange', render);
 render();
+
+// Register the service worker. autoUpdate applies new versions silently, with no
+// manual prompt, so users never get stuck on a stale cached build.
+registerSW({ immediate: true });
