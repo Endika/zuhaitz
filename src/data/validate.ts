@@ -12,6 +12,8 @@ export function validateDataset(ds: Dataset): ValidationResult {
       if (!(o.sketchId in ds.sketches))
         errors.push(`trait ${t.id} option ${o.id} references missing sketch ${o.sketchId}`);
 
+  const isNa = (v: string[] | undefined) => !!v && v.length === 1 && v[0] === 'n-a';
+
   for (const s of ds.species) {
     if (!s.commonName || !s.scientificName)
       errors.push(`species ${s.scientificName || s.commonName} missing a name`);
@@ -23,6 +25,21 @@ export function validateDataset(ds: Dataset): ValidationResult {
         if (!opts.has(v))
           errors.push(`species ${s.scientificName} trait ${tid} value ${v} not in options`);
     }
+
+    // Every species MUST define every trait key; an omitted key silently
+    // auto-eliminates the species in filter.ts (see traits.ts design note).
+    for (const t of ds.traits)
+      if (!(t.id in s.traits))
+        errors.push(`species ${s.scientificName} is missing required trait ${t.id}`);
+
+    // Conifer/palm invariant: leaf needle/scale or habit palm ⇒ margin and
+    // leafShape must be exactly ['n-a'], else the species is wrongly eliminated
+    // when a user honestly answers "no aplica".
+    const leaf = s.traits.leaf ?? [];
+    const habit = s.traits.habit ?? [];
+    const needsNa = leaf.includes('needle') || leaf.includes('scale') || habit.includes('palm');
+    if (needsNa && !(isNa(s.traits.margin) && isNa(s.traits.leafShape)))
+      errors.push(`species ${s.scientificName}: needle/scale/palm must use margin ['n-a'] and leafShape ['n-a']`);
   }
 
   const seen = new Map<string, string>();
