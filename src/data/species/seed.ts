@@ -41,7 +41,7 @@ export const seedSpecies: Species[] = [
     scientificName: 'Pinus pinea',
     traits: {
       leaf: ['needle'], margin: ['n-a'], arrangement: ['whorled'],
-      persistence: ['evergreen'], fruit: ['cone'], bark: ['fissured'],
+      persistence: ['evergreen'], fruit: ['cone'], bark: ['fissured', 'flaking'],
       habit: ['spreading'], leafShape: ['n-a'],
     },
     distinctiveNotes: 'Copa en forma de sombrilla aparasolada muy característica. Piñas redondeadas con piñones comestibles; acículas largas en pares.',
@@ -51,7 +51,7 @@ export const seedSpecies: Species[] = [
     scientificName: 'Citrus × aurantium',
     traits: {
       leaf: ['simple'], margin: ['entire', 'wavy'], arrangement: ['alternate'],
-      persistence: ['evergreen'], fruit: ['berry'], bark: ['smooth'],
+      persistence: ['evergreen'], fruit: ['berry'], bark: ['smooth', 'thorny'],
       habit: ['rounded'], leafShape: ['ovate'],
     },
     distinctiveNotes: 'Árbol urbano de calles del sur; hoja brillante con pecíolo alado, flores muy aromáticas (azahar) y naranjas amargas que persisten en invierno.',
