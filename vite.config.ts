@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  // Served from https://endika.github.io/zuhaitz/ — must match the repo name
+  // exactly (GitHub Pages is case-sensitive).
+  base: '/zuhaitz/',
   build: {
     target: 'es2022',
   },
@@ -18,8 +21,8 @@ export default defineConfig({
         description: 'Identificador offline de árboles mediante una clave de rasgos adaptativa.',
         lang: 'es',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: '/zuhaitz/',
+        scope: '/zuhaitz/',
         theme_color: '#2f7d52',
         background_color: '#14181a',
         icons: [

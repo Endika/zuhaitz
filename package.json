@@ -1,19 +1,20 @@
 {
   "name": "zuhaitz",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Offline PWA to identify Spanish trees via an adaptive trait key",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run validate && tsc --noEmit && vite build",
+    "build": "npm run validate && npm run typecheck && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "lint": "eslint . && tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate-dataset.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.9.2",
     "@typescript-eslint/eslint-plugin": "^8.61.0",
