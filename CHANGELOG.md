@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Endika/zuhaitz/compare/v0.2.0...v0.2.1) (2026-06-10)
+
+
+### Bug Fixes
+
+* **ui:** force light theme and drop near-black dark mode ([444b212](https://github.com/Endika/zuhaitz/commit/444b21246f5b6782dfa420a0ea8b74da33a4c2f9))
+
 ## [0.2.0](https://github.com/Endika/zuhaitz/compare/v0.1.0...v0.2.0) (2026-06-10)
 
 
