@@ -1,11 +1,13 @@
 import './styles/app.css';
 import { registerSW } from 'virtual:pwa-register';
+import type { Locale } from './engine/types';
 import { dataset } from './data/dataset';
 import { createSession } from './engine/session';
-import { mount } from './ui/dom';
+import { mount, el } from './ui/dom';
 import { renderHome } from './ui/home';
 import { renderIdentify } from './ui/identify';
 import { renderResult } from './ui/result';
+import { getLocale, setLocale, t } from './i18n';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
@@ -64,6 +66,43 @@ function render(): void {
     }),
   );
 }
+
+// Persistent header with the ES/EN language switcher. It lives above the mounted
+// view (outside #app) so it survives route changes. Switching language persists
+// the choice, updates <html lang>, re-renders the header active state, and
+// re-renders the current view in place so the change is visible immediately.
+function renderHeader(): HTMLElement {
+  const locale = getLocale();
+  const langs: Locale[] = ['es', 'en'];
+
+  const buttons = langs.map((l) =>
+    el('button', {
+      class: `lang-switch__btn${l === locale ? ' lang-switch__btn--active' : ''}`,
+      text: t(`lang.${l}`),
+      disabled: l === locale,
+      'aria-pressed': String(l === locale),
+      onClick: () => {
+        setLocale(l);
+        document.documentElement.lang = l;
+        header.replaceWith(renderHeader());
+        render();
+      },
+    }),
+  );
+
+  const header = el(
+    'header',
+    { class: 'app-header' },
+    [
+      el('nav', { class: 'lang-switch', 'aria-label': t('lang.label') }, buttons),
+    ],
+  );
+  return header;
+}
+
+document.documentElement.lang = getLocale();
+const header = renderHeader();
+if (app && app.parentNode) app.parentNode.insertBefore(header, app);
 
 window.addEventListener('hashchange', render);
 render();

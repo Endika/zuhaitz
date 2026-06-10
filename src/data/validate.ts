@@ -1,6 +1,14 @@
-import type { Dataset } from '../engine/types';
+import type { Dataset, I18nText } from '../engine/types';
 
 export interface ValidationResult { errors: string[]; warnings: string[]; }
+
+// A name is present if it's a non-empty string, or a {es,en} with both filled.
+// We do NOT require en !== es: group files are Spanish-only until translated.
+function hasName(v: I18nText | undefined): boolean {
+  if (v === undefined || v === null) return false;
+  if (typeof v === 'string') return v.length > 0;
+  return v.es.length > 0 && v.en.length > 0;
+}
 
 export function validateDataset(ds: Dataset): ValidationResult {
   const errors: string[] = [];
@@ -15,8 +23,10 @@ export function validateDataset(ds: Dataset): ValidationResult {
   const isNa = (v: string[] | undefined) => !!v && v.length === 1 && v[0] === 'n-a';
 
   for (const s of ds.species) {
-    if (!s.commonName || !s.scientificName)
-      errors.push(`species ${s.scientificName || s.commonName} missing a name`);
+    if (!hasName(s.commonName) || !hasName(s.scientificName)) {
+      const label = s.scientificName || (typeof s.commonName === 'string' ? s.commonName : s.commonName?.es) || '?';
+      errors.push(`species ${label} missing a name`);
+    }
     for (const [tid, values] of Object.entries(s.traits)) {
       const trait = traitById.get(tid);
       if (!trait) { errors.push(`species ${s.scientificName} references unknown trait ${tid}`); continue; }

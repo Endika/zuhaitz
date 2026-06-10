@@ -2,6 +2,7 @@ import type { createSession } from '../engine/session';
 import type { Dataset } from '../engine/types';
 import { el } from './dom';
 import { renderSketch } from './sketch';
+import { loc, remaining, t } from '../i18n';
 
 type Session = ReturnType<typeof createSession>;
 
@@ -31,10 +32,10 @@ export function renderIdentify(
 
     const counter = el('p', {
       class: 'identify__counter',
-      text: `Quedan ${candidates.length}`,
+      text: remaining(candidates.length),
     });
 
-    const heading = el('h2', { text: question.question });
+    const heading = el('h2', { text: loc(question.question) });
 
     const options = el(
       'div',
@@ -51,7 +52,7 @@ export function renderIdentify(
           },
           [
             renderSketch(sketches, opt.sketchId),
-            el('span', { class: 'option__label', text: opt.label }),
+            el('span', { class: 'option__label', text: loc(opt.label) }),
           ],
         ),
       ),
@@ -60,7 +61,7 @@ export function renderIdentify(
     const controls = el('div', { class: 'controls' }, [
       el('button', {
         class: 'btn',
-        text: 'No lo sé',
+        text: t('identify.dontKnow'),
         onClick: () => {
           session.skip();
           draw();
@@ -68,7 +69,7 @@ export function renderIdentify(
       }),
       el('button', {
         class: 'btn',
-        text: 'Atrás',
+        text: t('identify.back'),
         disabled: session.answers().length === 0,
         onClick: () => {
           session.back();

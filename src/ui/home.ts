@@ -1,7 +1,5 @@
 import { el } from './dom';
-
-const DISCLAIMER =
-  'Ayuda de identificación orientativa, no determinación pericial.';
+import { t } from '../i18n';
 
 // Home view: app icon, title, one-line intro, the disclaimer, a "Empezar" button,
 // and a version footer (matches the other sibling apps).
@@ -15,14 +13,11 @@ export function renderHome(onStart: () => void): HTMLElement {
       height: '96',
     }),
     el('h1', { text: 'zuhaitz' }),
-    el('p', {
-      class: 'home__intro',
-      text: 'Identifica árboles comunes de España respondiendo a unas pocas preguntas sobre sus hojas, fruto y corteza.',
-    }),
-    el('p', { class: 'disclaimer', text: DISCLAIMER }),
+    el('p', { class: 'home__intro', text: t('home.intro') }),
+    el('p', { class: 'disclaimer', text: t('disclaimer') }),
     el('button', {
       class: 'btn btn--primary',
-      text: 'Empezar',
+      text: t('home.start'),
       onClick: onStart,
     }),
     el('p', { class: 'footer footer--version', text: `v${__APP_VERSION__}` }),
