@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/Endika/zuhaitz/compare/v0.2.1...v0.2.2) (2026-06-10)
+
+
+### Bug Fixes
+
+* **ui:** add favicon and apple-touch-icon links ([1ed96b3](https://github.com/Endika/zuhaitz/commit/1ed96b3de957618af4ce126a1d3bda2c44a05449))
+* **ui:** recover from no-match by undoing the eliminating answer ([6ff7ba0](https://github.com/Endika/zuhaitz/commit/6ff7ba08f03f5c55d1d7aebefa1e49ecdb33ea2f))
+
 ## [0.2.1](https://github.com/Endika/zuhaitz/compare/v0.2.0...v0.2.1) (2026-06-10)
 
 
