@@ -2,6 +2,7 @@ import type { createSession } from '../engine/session';
 import type { Dataset, Species } from '../engine/types';
 import { el } from './dom';
 import { renderSketch } from './sketch';
+import { loc, possibleMatches, t } from '../i18n';
 
 type Session = ReturnType<typeof createSession>;
 
@@ -9,9 +10,6 @@ interface ResultHandlers {
   onRestart: () => void;
   onBack: () => void;
 }
-
-const DISCLAIMER =
-  'Ayuda de identificación orientativa, no determinación pericial.';
 
 // Build the illustrated trait list for one species: for every answered/known trait,
 // show the sketch + label of each admissible option value. Generic over any trait id.
@@ -30,7 +28,7 @@ function speciesSketches(
       cells.push(
         el('div', { class: 'card__trait' }, [
           renderSketch(sketches, opt.sketchId),
-          el('small', { text: opt.label }),
+          el('small', { text: loc(opt.label) }),
         ]),
       );
     }
@@ -44,9 +42,9 @@ function speciesCard(
   sketches: Dataset['sketches'],
 ): HTMLElement {
   return el('article', { class: 'card' }, [
-    el('h2', { text: species.commonName }),
+    el('h2', { text: loc(species.commonName) }),
     el('p', { class: 'card__sci', text: species.scientificName }),
-    el('p', { text: species.distinctiveNotes }),
+    el('p', { text: loc(species.distinctiveNotes) }),
     speciesSketches(species, traits, sketches),
   ]);
 }
@@ -59,16 +57,14 @@ export function renderResult(
   handlers: ResultHandlers,
 ): HTMLElement {
   const candidates = session.candidates();
-  const children: HTMLElement[] = [el('h1', { text: 'Resultado' })];
+  const children: HTMLElement[] = [el('h1', { text: t('result.title') })];
 
   if (candidates.length === 0) {
     children.push(
-      el('p', {
-        text: 'Sin coincidencias. Prueba a cambiar una respuesta: quizá un rasgo se interpretó de otro modo.',
-      }),
+      el('p', { text: t('result.noMatch') }),
       el('button', {
         class: 'btn btn--primary',
-        text: 'Atrás',
+        text: t('identify.back'),
         onClick: handlers.onBack,
       }),
     );
@@ -78,8 +74,8 @@ export function renderResult(
         class: 'muted',
         text:
           candidates.length === 1
-            ? 'Coincidencia más probable:'
-            : `Posibles coincidencias (${candidates.length}):`,
+            ? t('result.bestMatch')
+            : possibleMatches(candidates.length),
       }),
       el(
         'div',
@@ -92,10 +88,10 @@ export function renderResult(
   children.push(
     el('button', {
       class: 'btn',
-      text: 'Reiniciar',
+      text: t('result.restart'),
       onClick: handlers.onRestart,
     }),
-    el('p', { class: 'footer', text: DISCLAIMER }),
+    el('p', { class: 'footer', text: t('disclaimer') }),
   );
 
   return el('main', { class: 'view result' }, children);

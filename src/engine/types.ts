@@ -2,15 +2,20 @@ export type TraitId = string;
 export type OptionId = string;
 export type SketchId = string;
 
-export interface TraitOption { id: OptionId; label: string; sketchId: SketchId; }
-export interface Trait { id: TraitId; question: string; options: TraitOption[]; }
+export type Locale = 'es' | 'en';
+export type Localized = { es: string; en: string };
+/** A user-facing string: either a bare string (Spanish-only legacy) or localized. */
+export type I18nText = string | Localized;
+
+export interface TraitOption { id: OptionId; label: I18nText; sketchId: SketchId; }
+export interface Trait { id: TraitId; question: I18nText; options: TraitOption[]; }
 
 export interface Species {
-  commonName: string;
+  commonName: I18nText;
   scientificName: string;
   /** trait id -> set of admissible option ids (variable traits => >1) */
   traits: Record<TraitId, OptionId[]>;
-  distinctiveNotes: string;
+  distinctiveNotes: I18nText;
 }
 
 export interface Sketch { id: SketchId; svg: string; }
