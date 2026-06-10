@@ -1,8 +1,15 @@
 /// <reference types="vitest/config" />
+import { readFileSync } from 'node:fs';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
+const pkg = JSON.parse(
+  readFileSync(new URL('./package.json', import.meta.url), 'utf-8'),
+) as { version: string };
+
 export default defineConfig({
+  // Exposes the package version to the app for the footer (replaced at build time).
+  define: { __APP_VERSION__: JSON.stringify(pkg.version) },
   // Served from https://endika.github.io/zuhaitz/ — must match the repo name
   // exactly (GitHub Pages is case-sensitive).
   base: '/zuhaitz/',
