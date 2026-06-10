@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/Endika/zuhaitz/compare/v0.2.2...v0.3.0) (2026-06-10)
+
+
+### Features
+
+* **ui:** show app icon and version on home ([db38443](https://github.com/Endika/zuhaitz/commit/db38443f3366275f192de462f50313cf242c9e9f))
+
 ## [0.2.2](https://github.com/Endika/zuhaitz/compare/v0.2.1...v0.2.2) (2026-06-10)
 
 
