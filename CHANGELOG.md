@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.5.0](https://github.com/Endika/zuhaitz/compare/v0.4.0...v0.5.0) (2026-06-10)
+
+
+### Features
+
+* **photo:** add generated species photo set (167/174 coverage) ([fd2c121](https://github.com/Endika/zuhaitz/commit/fd2c1211d66db83b0c883b99f42da025da824780))
+* **photo:** add PhotoMeta type, manifest scaffold and lookup helpers ([473efd9](https://github.com/Endika/zuhaitz/commit/473efd9af16cf1d0de02c09e266b9326571c9cae))
+* **photo:** add Wikimedia photo fetch pipeline ([5f15072](https://github.com/Endika/zuhaitz/commit/5f150721bd2d4bcd488b5a6d72ac847347fb1844))
+* **pwa:** precache species photos for offline use ([67ea34f](https://github.com/Endika/zuhaitz/commit/67ea34f219a2ad6c5e60b8ff0e1be9e5d304b3c1))
+* **result:** show species photo with attribution above the card ([b2fba9f](https://github.com/Endika/zuhaitz/commit/b2fba9fea03a4aabbc367d99cfe8d74def42c5d9))
+
+
+### Performance
+
+* **photo:** shrink species photos to 320px/q55 (8.4MB-&gt;2.7MB) ([f0f0f29](https://github.com/Endika/zuhaitz/commit/f0f0f295938524c75c00f200d1955dc965249996))
+
 ## [0.4.0](https://github.com/Endika/zuhaitz/compare/v0.3.0...v0.4.0) (2026-06-10)
 
 
