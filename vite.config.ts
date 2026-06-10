@@ -41,7 +41,7 @@ export default defineConfig({
       workbox: {
         // The dataset is bundled into the JS, so precaching the app shell makes the
         // whole identifier work fully offline.
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,webp,webmanifest}'],
       },
     }),
   ],
