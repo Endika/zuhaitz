@@ -25,7 +25,7 @@ function render(): void {
   if (route === '#/identify') {
     // If the session already converged (e.g. coming back here at <= 3 candidates),
     // skip straight to the result rather than mounting a view that bounces.
-    if (session.currentQuestion() === null || session.candidates().length <= 3) {
+    if (session.converged()) {
       go('#/result');
       return;
     }
@@ -41,7 +41,15 @@ function render(): void {
           session.reset();
           go('#/');
         },
-        onBack: () => go('#/identify'),
+        // The result's "Atrás" only appears on the no-match (0 candidates) screen.
+        // Undo the answer that eliminated everything so the key has candidates
+        // again; otherwise the identify guard (candidates <= 3) bounces straight
+        // back here. After back() candidates are > 3 again (the eliminating
+        // question was only asked above that threshold), so the question reappears.
+        onBack: () => {
+          session.back();
+          go('#/identify');
+        },
       }),
     );
     return;

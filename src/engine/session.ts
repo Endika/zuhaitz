@@ -12,6 +12,10 @@ export function createSession(ds: Dataset) {
   return {
     candidates,
     currentQuestion,
+    // The key has converged when there is no further discriminating question or
+    // few enough candidates to show. NOTE: 0 candidates (a no-match) also counts
+    // as converged — callers must undo an answer to recover, not just re-enter.
+    converged: (): boolean => currentQuestion() === null || candidates().length <= 3,
     answers: () => [...answers],
     answer(traitId: string, value: string) { answers.push({ traitId, value }); },
     skip() {
