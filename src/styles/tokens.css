@@ -1,8 +1,9 @@
-/* Design tokens. Light by default, dark via prefers-color-scheme.
+/* Design tokens. Light only — a field-guide look; system dark mode is ignored.
    `accent` is the single brand color. No semantic (owe/error) colors needed here.
    Sketches stroke with `currentColor`, so they inherit `--color-text`. */
 
 :root {
+  color-scheme: light;
   --color-bg: #f7f6f2;
   --color-surface: #ffffff;
   --color-text: #1f2a24;
@@ -19,16 +20,4 @@
   --space-5: 2rem;
   --tap-target: 44px;
   --content-max: 720px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #14181a;
-    --color-surface: #1e2426;
-    --color-text: #e8ece8;
-    --color-muted: #9fb0a6;
-    --color-border: #323a3a;
-    --color-accent: #5fb985;
-    --color-accent-contrast: #0e1311;
-  }
 }
