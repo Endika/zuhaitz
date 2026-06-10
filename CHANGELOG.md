@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0](https://github.com/Endika/zuhaitz/compare/v0.3.0...v0.4.0) (2026-06-10)
+
+
+### Features
+
+* **i18n:** add locale infra, UI strings and language switcher ([261133f](https://github.com/Endika/zuhaitz/commit/261133fc2528487f3e6701cf32efd8a23647fdf0))
+* **i18n:** localize trait vocabulary (es/en) ([bee14bb](https://github.com/Endika/zuhaitz/commit/bee14bb3220fec9a2c1c5baa78cb31d99b4e1f65))
+* **i18n:** translate all 174 species names and notes to english ([739ee12](https://github.com/Endika/zuhaitz/commit/739ee1245e8a0cd5654715af66dc43a568497708))
+
 ## [0.3.0](https://github.com/Endika/zuhaitz/compare/v0.2.2...v0.3.0) (2026-06-10)
 
 
