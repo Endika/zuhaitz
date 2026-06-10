@@ -87,7 +87,7 @@ async function main() {
         const bin = await fetch(info.url, { headers: { 'User-Agent': UA } });
         if (!bin.ok) { discarded.push(`${sp.scientificName}: download ${bin.status}`); continue; }
         const buf = Buffer.from(await bin.arrayBuffer());
-        const webp = await sharp(buf).resize({ width: 512, withoutEnlargement: true }).webp({ quality: 72 }).toBuffer();
+        const webp = await sharp(buf).resize({ width: 320, withoutEnlargement: true }).webp({ quality: 55 }).toBuffer();
         await writeFile(path.join(OUT_DIR, file), webp);
         console.log(`ok  ${sp.scientificName.padEnd(28)} ${(webp.length / 1024).toFixed(0)}KB  ${info.license}`);
         await sleep(200);
