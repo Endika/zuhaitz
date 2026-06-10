@@ -264,3 +264,24 @@ p {
 a {
   color: var(--color-accent);
 }
+
+.card__photo {
+  margin: 0 0 0.75rem;
+}
+.card__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 16rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.card__attrib {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  text-align: right;
+}
+.card__attrib a {
+  color: inherit;
+}

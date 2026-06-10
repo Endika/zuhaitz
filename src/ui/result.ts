@@ -2,6 +2,7 @@ import type { createSession } from '../engine/session';
 import type { Dataset, Species } from '../engine/types';
 import { el } from './dom';
 import { renderSketch } from './sketch';
+import { renderPhoto } from './photo';
 import { loc, possibleMatches, t } from '../i18n';
 
 type Session = ReturnType<typeof createSession>;
@@ -41,12 +42,16 @@ function speciesCard(
   traits: Dataset['traits'],
   sketches: Dataset['sketches'],
 ): HTMLElement {
-  return el('article', { class: 'card' }, [
+  const photo = renderPhoto(species);
+  const parts: HTMLElement[] = [];
+  if (photo) parts.push(photo);
+  parts.push(
     el('h2', { text: loc(species.commonName) }),
     el('p', { class: 'card__sci', text: species.scientificName }),
     el('p', { text: loc(species.distinctiveNotes) }),
     speciesSketches(species, traits, sketches),
-  ]);
+  );
+  return el('article', { class: 'card' }, parts);
 }
 
 // Result view: up to 3 remaining species as cards. If none match, an explanatory
