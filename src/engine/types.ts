@@ -28,3 +28,15 @@ export interface Dataset {
 
 /** A user's answer to a trait. value === null means "don't know / skip". */
 export interface Answer { traitId: TraitId; value: OptionId | null; }
+
+/** One bundled species photo + its required CC attribution. Keyed by photoSlug(scientificName). */
+export interface PhotoMeta {
+  /** filename under public/photos/, e.g. "pinus-sylvestris.webp" */
+  file: string;
+  /** author/credit string as required by the license */
+  author: string;
+  /** short license name, e.g. "CC BY-SA 3.0" */
+  license: string;
+  /** Commons/Wikidata source page URL */
+  sourceUrl: string;
+}
