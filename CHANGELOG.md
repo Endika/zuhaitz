@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.1](https://github.com/Endika/zuhaitz/compare/v0.5.0...v0.5.1) (2026-07-06)
+
+
+### Chores
+
+* **deps-dev:** bump @types/node from 25.9.3 to 26.0.1 ([07523ea](https://github.com/Endika/zuhaitz/commit/07523ea7331b710ba2a6be16d356d44ec8f3ce32))
+* **deps-dev:** bump the npm-minor-patch group with 4 updates ([975723f](https://github.com/Endika/zuhaitz/commit/975723f8421ef9e049a1e9ece6644b1ddefe77b5))
+* **deps-dev:** bump the npm-minor-patch group with 4 updates ([ae7f1ad](https://github.com/Endika/zuhaitz/commit/ae7f1add54383b61e18bfa53e87e196b906bd096))
+* **deps-dev:** bump the npm-minor-patch group with 6 updates ([f6b3c00](https://github.com/Endika/zuhaitz/commit/f6b3c00c4c9d60b27fc1bdfdcd522c526cfec4f4))
+
 ## [0.5.0](https://github.com/Endika/zuhaitz/compare/v0.4.0...v0.5.0) (2026-06-10)
 
 
