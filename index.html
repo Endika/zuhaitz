@@ -2,12 +2,24 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#2f7d52" />
     <link rel="icon" type="image/png" sizes="192x192" href="/zuhaitz/icon-192.png" />
     <link rel="apple-touch-icon" href="/zuhaitz/icon-512.png" />
     <title>zuhaitz</title>
+    <style>
+      /* Prevent accidental zoom on mobile: block double-tap zoom, keep scroll/tap. */
+      html {
+        touch-action: manipulation;
+      }
+    </style>
+    <script>
+      // iOS Safari ignores user-scalable=no, so block pinch-zoom explicitly.
+      document.addEventListener('gesturestart', function (e) {
+        e.preventDefault()
+      })
+    </script>
   </head>
   <body>
     <div id="app"></div>
