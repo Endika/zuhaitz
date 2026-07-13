@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.2](https://github.com/Endika/zuhaitz/compare/v0.5.1...v0.5.2) (2026-07-13)
+
+
+### Bug Fixes
+
+* prevent accidental pinch and double-tap zoom on mobile ([95b88b5](https://github.com/Endika/zuhaitz/commit/95b88b51680c1df664c72c95f6de08142663f793))
+
+
+### Chores
+
+* **deps-dev:** bump the npm-minor-patch group with 7 updates ([523b1f2](https://github.com/Endika/zuhaitz/commit/523b1f21e48e6846b898a9fd13a3cf2b53f6e1ca))
+
 ## [0.5.1](https://github.com/Endika/zuhaitz/compare/v0.5.0...v0.5.1) (2026-07-06)
 
 
