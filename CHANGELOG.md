@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.4](https://github.com/Endika/zuhaitz/compare/v0.5.3...v0.5.4) (2026-08-04)
+
+
+### Chores
+
+* **deps-dev:** bump fast-uri from 3.1.2 to 3.1.5 ([22b2f01](https://github.com/Endika/zuhaitz/commit/22b2f01a0450efd1a83748365804f9619d8ac8a4))
+* **deps-dev:** bump the npm-minor-patch group with 2 updates ([d8faa0a](https://github.com/Endika/zuhaitz/commit/d8faa0ac9b753f0bd86b66941b4afe2febf875d5))
+* **deps-dev:** bump the npm-minor-patch group with 3 updates ([e1f58f1](https://github.com/Endika/zuhaitz/commit/e1f58f1ff6f3fc12a5bd6ea76d182fa719d125a3))
+* **deps:** bump brace-expansion ([bce2da5](https://github.com/Endika/zuhaitz/commit/bce2da580c8c956f25f08955969ea705da3f790f))
+
 ## [0.5.3](https://github.com/Endika/zuhaitz/compare/v0.5.2...v0.5.3) (2026-07-15)
 
 
