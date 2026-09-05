@@ -1,0 +1,8 @@
+dist
+coverage
+node_modules
+package-lock.json
+
+# Rewritten wholesale by `npm run photos` (JSON.stringify output), so
+# formatting it would turn format:check red after every regeneration.
+src/data/photos.generated.ts

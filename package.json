@@ -10,6 +10,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write \"{src,tests,scripts}/**/*.{ts,css,json}\"",
+    "format:check": "prettier --check \"{src,tests,scripts}/**/*.{ts,css,json}\"",
     "type:check": "tsc --noEmit",
     "validate": "tsx scripts/validate-dataset.ts",
     "photos": "tsx scripts/fetch-photos.ts"
@@ -22,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^8.68.0",
     "@typescript-eslint/parser": "^8.61.0",
     "eslint": "^10.9.1",
+    "prettier": "^3.9.6",
     "sharp": "^0.35.4",
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
