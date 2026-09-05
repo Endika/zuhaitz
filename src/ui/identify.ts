@@ -1,13 +1,13 @@
-import type { createSession } from '../engine/session';
-import type { Dataset } from '../engine/types';
-import { el } from './dom';
-import { renderSketch } from './sketch';
-import { loc, remaining, t } from '../i18n';
+import type { createSession } from '../engine/session'
+import type { Dataset } from '../engine/types'
+import { el } from './dom'
+import { renderSketch } from './sketch'
+import { loc, remaining, t } from '../i18n'
 
-type Session = ReturnType<typeof createSession>;
+type Session = ReturnType<typeof createSession>
 
 interface IdentifyHandlers {
-  onResult: () => void;
+  onResult: () => void
 }
 
 // Adaptive identify view. Renders the current question with one button per option
@@ -19,23 +19,23 @@ export function renderIdentify(
   sketches: Dataset['sketches'],
   handlers: IdentifyHandlers,
 ): HTMLElement {
-  const root = el('main', { class: 'view identify' });
+  const root = el('main', { class: 'view identify' })
 
   const draw = (): void => {
-    const candidates = session.candidates();
-    const question = session.currentQuestion();
+    const candidates = session.candidates()
+    const question = session.currentQuestion()
 
     if (question === null || candidates.length <= 3) {
-      handlers.onResult();
-      return;
+      handlers.onResult()
+      return
     }
 
     const counter = el('p', {
       class: 'identify__counter',
       text: remaining(candidates.length),
-    });
+    })
 
-    const heading = el('h2', { text: loc(question.question) });
+    const heading = el('h2', { text: loc(question.question) })
 
     const options = el(
       'div',
@@ -46,8 +46,8 @@ export function renderIdentify(
           {
             class: 'btn option',
             onClick: () => {
-              session.answer(question.id, opt.id);
-              draw();
+              session.answer(question.id, opt.id)
+              draw()
             },
           },
           [
@@ -56,15 +56,15 @@ export function renderIdentify(
           ],
         ),
       ),
-    );
+    )
 
     const controls = el('div', { class: 'controls' }, [
       el('button', {
         class: 'btn',
         text: t('identify.dontKnow'),
         onClick: () => {
-          session.skip();
-          draw();
+          session.skip()
+          draw()
         },
       }),
       el('button', {
@@ -72,15 +72,15 @@ export function renderIdentify(
         text: t('identify.back'),
         disabled: session.answers().length === 0,
         onClick: () => {
-          session.back();
-          draw();
+          session.back()
+          draw()
         },
       }),
-    ]);
+    ])
 
-    root.replaceChildren(counter, heading, options, controls);
-  };
+    root.replaceChildren(counter, heading, options, controls)
+  }
 
-  draw();
-  return root;
+  draw()
+  return root
 }

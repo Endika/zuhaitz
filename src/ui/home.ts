@@ -1,5 +1,5 @@
-import { el } from './dom';
-import { t } from '../i18n';
+import { el } from './dom'
+import { t } from '../i18n'
 
 // Home view: app icon, title, one-line intro, the disclaimer, a "Empezar" button,
 // and a version footer (matches the other sibling apps).
@@ -21,5 +21,5 @@ export function renderHome(onStart: () => void): HTMLElement {
       onClick: onStart,
     }),
     el('p', { class: 'footer footer--version', text: `v${__APP_VERSION__}` }),
-  ]);
+  ])
 }
