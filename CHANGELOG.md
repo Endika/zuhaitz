@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.9](https://github.com/Endika/zuhaitz/compare/v0.5.8...v0.5.9) (2026-09-05)
+
+
+### Chores
+
+* run the four CI gates in pre-commit ([f36d7df](https://github.com/Endika/zuhaitz/commit/f36d7dfa38ecb3569425e044a974d2f52add97ec))
+
 ## [0.5.8](https://github.com/Endika/zuhaitz/compare/v0.5.7...v0.5.8) (2026-09-05)
 
 
