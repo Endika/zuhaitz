@@ -1,6 +1,6 @@
 {
   "name": "zuhaitz",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Offline PWA to identify Spanish trees via an adaptive trait key",
   "type": "module",
   "scripts": {
