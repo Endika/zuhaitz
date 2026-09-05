@@ -1,4 +1,4 @@
-import type { Trait } from '../engine/types';
+import type { Trait } from '../engine/types'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TRAIT VOCABULARY
@@ -53,10 +53,26 @@ export const traits: Trait[] = [
     id: 'leaf',
     question: { es: '¿Cómo es la hoja?', en: 'What is the leaf like?' },
     options: [
-      { id: 'simple', label: { es: 'Simple (una sola lámina)', en: 'Simple (single blade)' }, sketchId: 'leaf-simple' },
-      { id: 'compound', label: { es: 'Compuesta (varios folíolos)', en: 'Compound (several leaflets)' }, sketchId: 'leaf-compound' },
-      { id: 'needle', label: { es: 'Acícula (aguja de conífera)', en: 'Needle (conifer needle)' }, sketchId: 'leaf-needle' },
-      { id: 'scale', label: { es: 'Escama (ciprés, tuya)', en: 'Scale (cypress, thuja)' }, sketchId: 'leaf-scale' },
+      {
+        id: 'simple',
+        label: { es: 'Simple (una sola lámina)', en: 'Simple (single blade)' },
+        sketchId: 'leaf-simple',
+      },
+      {
+        id: 'compound',
+        label: { es: 'Compuesta (varios folíolos)', en: 'Compound (several leaflets)' },
+        sketchId: 'leaf-compound',
+      },
+      {
+        id: 'needle',
+        label: { es: 'Acícula (aguja de conífera)', en: 'Needle (conifer needle)' },
+        sketchId: 'leaf-needle',
+      },
+      {
+        id: 'scale',
+        label: { es: 'Escama (ciprés, tuya)', en: 'Scale (cypress, thuja)' },
+        sketchId: 'leaf-scale',
+      },
     ],
   },
   {
@@ -64,29 +80,68 @@ export const traits: Trait[] = [
     // Broadleaf-only. Conifers/palms answer 'n-a'. See design note above.
     question: { es: '¿Cómo es el borde de la hoja?', en: 'What is the leaf margin like?' },
     options: [
-      { id: 'entire', label: { es: 'Liso (entero)', en: 'Entire (smooth)' }, sketchId: 'margin-entire' },
-      { id: 'serrate', label: { es: 'Dentado / serrado', en: 'Toothed / serrate' }, sketchId: 'margin-serrate' },
+      {
+        id: 'entire',
+        label: { es: 'Liso (entero)', en: 'Entire (smooth)' },
+        sketchId: 'margin-entire',
+      },
+      {
+        id: 'serrate',
+        label: { es: 'Dentado / serrado', en: 'Toothed / serrate' },
+        sketchId: 'margin-serrate',
+      },
       { id: 'lobed', label: { es: 'Lobulado', en: 'Lobed' }, sketchId: 'margin-lobed' },
       { id: 'wavy', label: { es: 'Ondulado', en: 'Wavy' }, sketchId: 'margin-wavy' },
-      { id: 'spiny', label: { es: 'Espinoso (con pinchos)', en: 'Spiny (with prickles)' }, sketchId: 'margin-spiny' },
-      { id: 'n-a', label: { es: 'No aplica (conífera/palmera)', en: 'N/A (conifer/palm)' }, sketchId: 'na' },
+      {
+        id: 'spiny',
+        label: { es: 'Espinoso (con pinchos)', en: 'Spiny (with prickles)' },
+        sketchId: 'margin-spiny',
+      },
+      {
+        id: 'n-a',
+        label: { es: 'No aplica (conífera/palmera)', en: 'N/A (conifer/palm)' },
+        sketchId: 'na',
+      },
     ],
   },
   {
     id: 'arrangement',
-    question: { es: '¿Cómo se disponen las hojas en la rama?', en: 'How are the leaves arranged on the twig?' },
+    question: {
+      es: '¿Cómo se disponen las hojas en la rama?',
+      en: 'How are the leaves arranged on the twig?',
+    },
     options: [
-      { id: 'alternate', label: { es: 'Alternas', en: 'Alternate' }, sketchId: 'arrangement-alternate' },
-      { id: 'opposite', label: { es: 'Opuestas', en: 'Opposite' }, sketchId: 'arrangement-opposite' },
-      { id: 'whorled', label: { es: 'Verticiladas', en: 'Whorled' }, sketchId: 'arrangement-whorled' },
+      {
+        id: 'alternate',
+        label: { es: 'Alternas', en: 'Alternate' },
+        sketchId: 'arrangement-alternate',
+      },
+      {
+        id: 'opposite',
+        label: { es: 'Opuestas', en: 'Opposite' },
+        sketchId: 'arrangement-opposite',
+      },
+      {
+        id: 'whorled',
+        label: { es: 'Verticiladas', en: 'Whorled' },
+        sketchId: 'arrangement-whorled',
+      },
     ],
   },
   {
     id: 'persistence',
     question: { es: '¿Mantiene las hojas en invierno?', en: 'Does it keep its leaves in winter?' },
     options: [
-      { id: 'deciduous', label: { es: 'Caduca (las pierde en invierno)', en: 'Deciduous (sheds in winter)' }, sketchId: 'persistence-deciduous' },
-      { id: 'evergreen', label: { es: 'Perenne (siempre verde)', en: 'Evergreen (always green)' }, sketchId: 'persistence-evergreen' },
+      {
+        id: 'deciduous',
+        label: { es: 'Caduca (las pierde en invierno)', en: 'Deciduous (sheds in winter)' },
+        sketchId: 'persistence-deciduous',
+      },
+      {
+        id: 'evergreen',
+        label: { es: 'Perenne (siempre verde)', en: 'Evergreen (always green)' },
+        sketchId: 'persistence-evergreen',
+      },
     ],
   },
   {
@@ -94,16 +149,48 @@ export const traits: Trait[] = [
     question: { es: '¿Qué tipo de fruto produce?', en: 'What kind of fruit does it bear?' },
     options: [
       { id: 'acorn', label: { es: 'Bellota', en: 'Acorn' }, sketchId: 'fruit-acorn' },
-      { id: 'samara', label: { es: 'Sámara (alada)', en: 'Samara (winged)' }, sketchId: 'fruit-samara' },
-      { id: 'pome', label: { es: 'Pomo (tipo manzana)', en: 'Pome (apple-like)' }, sketchId: 'fruit-pome' },
-      { id: 'drupe', label: { es: 'Drupa (carnosa con hueso)', en: 'Drupe (fleshy with a stone)' }, sketchId: 'fruit-drupe' },
-      { id: 'berry', label: { es: 'Baya (carnosa con semillas)', en: 'Berry (fleshy with seeds)' }, sketchId: 'fruit-berry' },
-      { id: 'legume', label: { es: 'Legumbre (vaina)', en: 'Legume (pod)' }, sketchId: 'fruit-legume' },
+      {
+        id: 'samara',
+        label: { es: 'Sámara (alada)', en: 'Samara (winged)' },
+        sketchId: 'fruit-samara',
+      },
+      {
+        id: 'pome',
+        label: { es: 'Pomo (tipo manzana)', en: 'Pome (apple-like)' },
+        sketchId: 'fruit-pome',
+      },
+      {
+        id: 'drupe',
+        label: { es: 'Drupa (carnosa con hueso)', en: 'Drupe (fleshy with a stone)' },
+        sketchId: 'fruit-drupe',
+      },
+      {
+        id: 'berry',
+        label: { es: 'Baya (carnosa con semillas)', en: 'Berry (fleshy with seeds)' },
+        sketchId: 'fruit-berry',
+      },
+      {
+        id: 'legume',
+        label: { es: 'Legumbre (vaina)', en: 'Legume (pod)' },
+        sketchId: 'fruit-legume',
+      },
       { id: 'cone', label: { es: 'Piña / cono', en: 'Cone' }, sketchId: 'fruit-cone' },
-      { id: 'capsule', label: { es: 'Cápsula (seca que se abre)', en: 'Capsule (dry, splitting open)' }, sketchId: 'fruit-capsule' },
-      { id: 'nut', label: { es: 'Nuez / fruto seco con cáscara', en: 'Nut (shelled)' }, sketchId: 'fruit-nut' },
+      {
+        id: 'capsule',
+        label: { es: 'Cápsula (seca que se abre)', en: 'Capsule (dry, splitting open)' },
+        sketchId: 'fruit-capsule',
+      },
+      {
+        id: 'nut',
+        label: { es: 'Nuez / fruto seco con cáscara', en: 'Nut (shelled)' },
+        sketchId: 'fruit-nut',
+      },
       { id: 'fig', label: { es: 'Higo (siconio)', en: 'Fig (syconium)' }, sketchId: 'fruit-fig' },
-      { id: 'none-visible', label: { es: 'Sin fruto visible llamativo', en: 'No conspicuous fruit visible' }, sketchId: 'fruit-none' },
+      {
+        id: 'none-visible',
+        label: { es: 'Sin fruto visible llamativo', en: 'No conspicuous fruit visible' },
+        sketchId: 'fruit-none',
+      },
     ],
   },
   {
@@ -111,37 +198,103 @@ export const traits: Trait[] = [
     question: { es: '¿Cómo es la corteza del tronco?', en: 'What is the trunk bark like?' },
     options: [
       { id: 'smooth', label: { es: 'Lisa', en: 'Smooth' }, sketchId: 'bark-smooth' },
-      { id: 'fissured', label: { es: 'Agrietada / surcada', en: 'Fissured / furrowed' }, sketchId: 'bark-fissured' },
-      { id: 'flaking', label: { es: 'Se desprende en placas', en: 'Flaking in plates' }, sketchId: 'bark-flaking' },
-      { id: 'thorny', label: { es: 'Con espinas o aguijones', en: 'Thorny (with spines or prickles)' }, sketchId: 'bark-thorny' },
-      { id: 'papery', label: { es: 'Como papel (se pela en láminas)', en: 'Papery (peels in thin sheets)' }, sketchId: 'bark-papery' },
-      { id: 'corky', label: { es: 'Gruesa y corchosa', en: 'Thick and corky' }, sketchId: 'bark-corky' },
+      {
+        id: 'fissured',
+        label: { es: 'Agrietada / surcada', en: 'Fissured / furrowed' },
+        sketchId: 'bark-fissured',
+      },
+      {
+        id: 'flaking',
+        label: { es: 'Se desprende en placas', en: 'Flaking in plates' },
+        sketchId: 'bark-flaking',
+      },
+      {
+        id: 'thorny',
+        label: { es: 'Con espinas o aguijones', en: 'Thorny (with spines or prickles)' },
+        sketchId: 'bark-thorny',
+      },
+      {
+        id: 'papery',
+        label: { es: 'Como papel (se pela en láminas)', en: 'Papery (peels in thin sheets)' },
+        sketchId: 'bark-papery',
+      },
+      {
+        id: 'corky',
+        label: { es: 'Gruesa y corchosa', en: 'Thick and corky' },
+        sketchId: 'bark-corky',
+      },
     ],
   },
   {
     id: 'habit',
-    question: { es: '¿Qué forma tiene la copa o el árbol?', en: 'What is the shape of the crown or tree?' },
+    question: {
+      es: '¿Qué forma tiene la copa o el árbol?',
+      en: 'What is the shape of the crown or tree?',
+    },
     options: [
-      { id: 'columnar', label: { es: 'Columnar (estrecho y vertical)', en: 'Columnar (narrow and upright)' }, sketchId: 'habit-columnar' },
+      {
+        id: 'columnar',
+        label: { es: 'Columnar (estrecho y vertical)', en: 'Columnar (narrow and upright)' },
+        sketchId: 'habit-columnar',
+      },
       { id: 'rounded', label: { es: 'Redondeada', en: 'Rounded' }, sketchId: 'habit-rounded' },
-      { id: 'weeping', label: { es: 'Llorona (ramas colgantes)', en: 'Weeping (drooping branches)' }, sketchId: 'habit-weeping' },
-      { id: 'spreading', label: { es: 'Extendida (más ancha que alta)', en: 'Spreading (wider than tall)' }, sketchId: 'habit-spreading' },
-      { id: 'conical', label: { es: 'Cónica (de pirámide)', en: 'Conical (pyramidal)' }, sketchId: 'habit-conical' },
-      { id: 'palm', label: { es: 'Palmera (penacho de hojas arriba)', en: 'Palm (tuft of leaves on top)' }, sketchId: 'habit-palm' },
+      {
+        id: 'weeping',
+        label: { es: 'Llorona (ramas colgantes)', en: 'Weeping (drooping branches)' },
+        sketchId: 'habit-weeping',
+      },
+      {
+        id: 'spreading',
+        label: { es: 'Extendida (más ancha que alta)', en: 'Spreading (wider than tall)' },
+        sketchId: 'habit-spreading',
+      },
+      {
+        id: 'conical',
+        label: { es: 'Cónica (de pirámide)', en: 'Conical (pyramidal)' },
+        sketchId: 'habit-conical',
+      },
+      {
+        id: 'palm',
+        label: { es: 'Palmera (penacho de hojas arriba)', en: 'Palm (tuft of leaves on top)' },
+        sketchId: 'habit-palm',
+      },
     ],
   },
   {
     id: 'leafShape',
     // Broadleaf-only detail. Conifers/palms answer 'n-a'. See design note above.
-    question: { es: '¿Qué forma tiene la lámina de la hoja?', en: 'What is the shape of the leaf blade?' },
+    question: {
+      es: '¿Qué forma tiene la lámina de la hoja?',
+      en: 'What is the shape of the leaf blade?',
+    },
     options: [
-      { id: 'ovate', label: { es: 'Aovada (como un huevo)', en: 'Ovate (egg-shaped)' }, sketchId: 'shape-ovate' },
-      { id: 'lanceolate', label: { es: 'Lanceolada (estrecha y larga)', en: 'Lanceolate (narrow and long)' }, sketchId: 'shape-lanceolate' },
-      { id: 'palmate', label: { es: 'Palmeada (tipo mano)', en: 'Palmate (hand-shaped)' }, sketchId: 'shape-palmate' },
+      {
+        id: 'ovate',
+        label: { es: 'Aovada (como un huevo)', en: 'Ovate (egg-shaped)' },
+        sketchId: 'shape-ovate',
+      },
+      {
+        id: 'lanceolate',
+        label: { es: 'Lanceolada (estrecha y larga)', en: 'Lanceolate (narrow and long)' },
+        sketchId: 'shape-lanceolate',
+      },
+      {
+        id: 'palmate',
+        label: { es: 'Palmeada (tipo mano)', en: 'Palmate (hand-shaped)' },
+        sketchId: 'shape-palmate',
+      },
       { id: 'heart', label: { es: 'Acorazonada', en: 'Heart-shaped' }, sketchId: 'shape-heart' },
-      { id: 'linear', label: { es: 'Linear (muy estrecha)', en: 'Linear (very narrow)' }, sketchId: 'shape-linear' },
+      {
+        id: 'linear',
+        label: { es: 'Linear (muy estrecha)', en: 'Linear (very narrow)' },
+        sketchId: 'shape-linear',
+      },
       { id: 'rounded', label: { es: 'Redondeada', en: 'Rounded' }, sketchId: 'shape-rounded' },
-      { id: 'n-a', label: { es: 'No aplica (conífera/palmera)', en: 'N/A (conifer/palm)' }, sketchId: 'na' },
+      {
+        id: 'n-a',
+        label: { es: 'No aplica (conífera/palmera)', en: 'N/A (conifer/palm)' },
+        sketchId: 'na',
+      },
     ],
   },
-];
+]

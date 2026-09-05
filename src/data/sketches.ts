@@ -1,6 +1,7 @@
 // Schematic flora-book style sketches. One per sketchId referenced by traits.ts.
 // All use viewBox 0 0 64 64, stroke=currentColor, fill=none so they inherit the text color.
-const S = 'viewBox="0 0 64 64" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+const S =
+  'viewBox="0 0 64 64" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
 
 export const sketches: Record<string, string> = {
   // --- leaf type ---
@@ -71,5 +72,5 @@ export const sketches: Record<string, string> = {
   'shape-rounded': `<svg ${S}><circle cx="32" cy="32" r="22"/></svg>`,
 
   // --- not applicable (broadleaf-only trait answered by conifer/palm) ---
-  'na': `<svg ${S}><circle cx="32" cy="32" r="20"/><path d="M22 22 L42 42"/><path d="M42 22 L22 42"/></svg>`,
-};
+  na: `<svg ${S}><circle cx="32" cy="32" r="20"/><path d="M22 22 L42 42"/><path d="M42 22 L22 42"/></svg>`,
+}
