@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.8](https://github.com/Endika/zuhaitz/compare/v0.5.7...v0.5.8) (2026-09-05)
+
+
+### Chores
+
+* format the root config files too ([3bfe3d0](https://github.com/Endika/zuhaitz/commit/3bfe3d0c149a2e7d1d49cb82538cb3baf8d45409))
+
 ## [0.5.7](https://github.com/Endika/zuhaitz/compare/v0.5.6...v0.5.7) (2026-09-05)
 
 
