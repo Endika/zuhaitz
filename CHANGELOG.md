@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.7](https://github.com/Endika/zuhaitz/compare/v0.5.6...v0.5.7) (2026-09-05)
+
+
+### Chores
+
+* ignore the prettier reformat in git blame ([c329466](https://github.com/Endika/zuhaitz/commit/c329466440ef92df4265675bbf33746199b4dfc2))
+
 ## [0.5.6](https://github.com/Endika/zuhaitz/compare/v0.5.5...v0.5.6) (2026-09-05)
 
 
