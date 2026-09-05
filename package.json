@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run validate && npm run typecheck && vite build",
+    "build": "npm run validate && npm run type:check && vite build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest",
+    "test:run": "vitest run",
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "tsc --noEmit",
+    "type:check": "tsc --noEmit",
     "validate": "tsx scripts/validate-dataset.ts",
     "photos": "tsx scripts/fetch-photos.ts"
   },
