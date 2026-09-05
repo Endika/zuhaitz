@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.5.5](https://github.com/Endika/zuhaitz/compare/v0.5.4...v0.5.5) (2026-09-05)
+
+
+### Chores
+
+* align CI gate scripts with the house contract ([299442e](https://github.com/Endika/zuhaitz/commit/299442e5231c68c541e902bb3c71396c14383520))
+* **deps-dev:** bump browserslist ([9fb1cf2](https://github.com/Endika/zuhaitz/commit/9fb1cf2586c4fa9ae75b363d19bcee616bcfe8cc))
+* **deps-dev:** bump fast-uri ([c6405d1](https://github.com/Endika/zuhaitz/commit/c6405d12fe8a65983bab8190c0ccc7e44b9953ee))
+* **deps-dev:** bump the npm-minor-patch group with 2 updates ([c5c809e](https://github.com/Endika/zuhaitz/commit/c5c809e12a98b61d90c7872068da40bc39ff61eb))
+* **deps-dev:** bump the npm-minor-patch group with 3 updates ([9f76c20](https://github.com/Endika/zuhaitz/commit/9f76c20fafbcb2395a4784a81a1f79940ef0f3c6))
+* **deps-dev:** bump the npm-minor-patch group with 6 updates ([1263563](https://github.com/Endika/zuhaitz/commit/126356373c96e6dba47b549eb6a13758d8384ec4))
+* **deps-dev:** bump the npm-minor-patch group with 6 updates ([93bb279](https://github.com/Endika/zuhaitz/commit/93bb2798bbb9a4cd5ac4d107b9b5b1460de9207b))
+* **deps-dev:** bump vite in the npm-minor-patch group ([960a72f](https://github.com/Endika/zuhaitz/commit/960a72fdc98d99e5d369b0c8c5bd50d6a59f0096))
+* **deps:** bump esbuild from 0.28.0 to 0.28.1 ([14d1e28](https://github.com/Endika/zuhaitz/commit/14d1e283b7bf910f91c41005953b54396002e8c8))
+
 ## [0.5.4](https://github.com/Endika/zuhaitz/compare/v0.5.3...v0.5.4) (2026-08-04)
 
 
