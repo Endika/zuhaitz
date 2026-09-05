@@ -61,14 +61,15 @@ npm install
 npm run dev
 ```
 
-| Command             | Description                          |
-| ------------------- | ------------------------------------ |
-| `npm run dev`       | Start the dev server                 |
-| `npm run build`     | Validate dataset, typecheck, build   |
-| `npm test`          | Run tests once                       |
-| `npm run lint`      | ESLint (zero warnings)               |
-| `npm run typecheck` | TypeScript type check                |
+| Command              | Description                           |
+| -------------------- | ------------------------------------- |
+| `npm run dev`        | Start the dev server                  |
+| `npm run build`      | Validate dataset, type-check, build   |
+| `npm test`           | Run tests in watch mode               |
+| `npm run test:run`   | Run tests once                        |
+| `npm run lint`       | ESLint (zero warnings)                |
+| `npm run type:check` | TypeScript type check                 |
 
-CI runs lint, typecheck, tests, and the production build on every PR.
+CI runs lint, type:check, tests, and the production build on every PR.
 
 Open-source, MIT licensed. PRs welcome.
