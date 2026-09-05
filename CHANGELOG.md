@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.6](https://github.com/Endika/zuhaitz/compare/v0.5.5...v0.5.6) (2026-09-05)
+
+
+### Chores
+
+* add prettier and a format:check gate ([91e0979](https://github.com/Endika/zuhaitz/commit/91e09791d2366b7627b7d329d6a5e330b4d00a30))
+
 ## [0.5.5](https://github.com/Endika/zuhaitz/compare/v0.5.4...v0.5.5) (2026-09-05)
 
 
