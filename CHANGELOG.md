@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.10](https://github.com/Endika/zuhaitz/compare/v0.5.9...v0.5.10) (2026-09-09)
+
+
+### Chores
+
+* **deps-dev:** bump the npm-minor-patch group with 4 updates ([becba22](https://github.com/Endika/zuhaitz/commit/becba226d8d29f2831b3d05829158585e0b1f1eb))
+
 ## [0.5.9](https://github.com/Endika/zuhaitz/compare/v0.5.8...v0.5.9) (2026-09-05)
 
 
