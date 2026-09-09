@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.11](https://github.com/Endika/zuhaitz/compare/v0.5.10...v0.5.11) (2026-09-09)
+
+
+### Chores
+
+* **deps-dev:** bump vitest from 4.1.11 to 5.0.0 ([dddc674](https://github.com/Endika/zuhaitz/commit/dddc674a7571d63cfd9173fa79e2f47f6d2153a8))
+
 ## [0.5.10](https://github.com/Endika/zuhaitz/compare/v0.5.9...v0.5.10) (2026-09-09)
 
 
