@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/Endika/zuhaitz/compare/v0.6.0...v0.7.0) (2026-09-16)
+
+
+### Features
+
+* **ci:** add CodeQL static analysis ([3e33f5d](https://github.com/Endika/zuhaitz/commit/3e33f5deeec8d49974290df0fd2b91e68342c813))
+
 ## [0.6.0](https://github.com/Endika/zuhaitz/compare/v0.5.11...v0.6.0) (2026-09-16)
 
 
