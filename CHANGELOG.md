@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/Endika/zuhaitz/compare/v0.5.11...v0.6.0) (2026-09-16)
+
+
+### Features
+
+* **ci:** block PRs that introduce high-severity dependency advisories ([d8fb9ab](https://github.com/Endika/zuhaitz/commit/d8fb9ab506ea6b08bff95905baaecf435c356024))
+
 ## [0.5.11](https://github.com/Endika/zuhaitz/compare/v0.5.10...v0.5.11) (2026-09-09)
 
 
