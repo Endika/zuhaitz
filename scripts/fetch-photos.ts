@@ -28,6 +28,17 @@ const REUSABLE = /^(cc0|public domain|cc by(-sa)?\b)/i
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
+// Loops the tag-strip to a fixed point, since a single pass leaves behind
+// nested/overlapping tags like `<<a>script>` (incomplete sanitization).
+export const stripTags = (s: string): string => {
+  let out = s
+  for (let prev; prev !== out;) {
+    prev = out
+    out = out.replace(/<[^>]+>/g, '')
+  }
+  return out
+}
+
 async function sparqlImageFile(scientificName: string): Promise<string | null> {
   const q = `SELECT ?img WHERE { ?t wdt:P225 "${scientificName.replace(/"/g, '')}" . ?t wdt:P18 ?img . } LIMIT 1`
   const url = `https://query.wikidata.org/sparql?format=json&query=${encodeURIComponent(q)}`
@@ -75,7 +86,7 @@ async function commonsInfo(fileName: string): Promise<CommonsInfo | null> {
   if (!info) return null
   const md = info.extmetadata ?? {}
   const license = (md.LicenseShortName?.value ?? '').trim()
-  const author = (md.Artist?.value ?? '').replace(/<[^>]+>/g, '').trim() || 'Wikimedia Commons'
+  const author = stripTags(md.Artist?.value ?? '').trim() || 'Wikimedia Commons'
   return { url: info.url, author, license, descUrl: info.descriptionurl }
 }
 
