@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/Endika/zuhaitz/compare/v0.7.0...v0.7.1) (2026-09-17)
+
+
+### Bug Fixes
+
+* **scripts:** strip HTML tags to a fixed point in fetch-photos ([0f8ba91](https://github.com/Endika/zuhaitz/commit/0f8ba91763514cec10733c8c8d843cd6c960418c))
+
 ## [0.7.0](https://github.com/Endika/zuhaitz/compare/v0.6.0...v0.7.0) (2026-09-16)
 
 
