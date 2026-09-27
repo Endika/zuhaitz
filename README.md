@@ -26,7 +26,8 @@
 - Answer simple illustrated questions about leaves, bark, fruit and shape.
 - Watch the list of candidate species shrink with every answer.
 - Get illustrated sketches for each trait, so you don't need to know botanical names.
-- Reach a likely species (or a short shortlist) without ever going online.
+- See a photo of the species with the result (167 of the 174, from Wikimedia Commons, with attribution).
+- Reach a likely species (or a short shortlist).
 - Start over any time to identify another tree.
 - Install it as a PWA on any device.
 
@@ -42,7 +43,7 @@ Open **[endika.github.io/zuhaitz](https://endika.github.io/zuhaitz/)** in Chrome
 
 ## Disclaimer
 
-zuhaitz is a tool for **orientación**, not **determinación pericial** — it offers botanical-ID help, not expert determination. Use it to point yourself toward a likely species, not as authoritative or legally binding identification. When certainty matters (toxicity, protected species, professional use), consult a qualified botanist.
+zuhaitz is a tool for **orientación**, not **determinación pericial** — use it to point yourself toward a likely species, not as an authoritative or legally binding identification. When certainty matters (toxicity, protected species, professional use), consult a qualified botanist.
 
 ---
 
@@ -50,7 +51,7 @@ zuhaitz is a tool for **orientación**, not **determinación pericial** — it o
 
 **Stack** — TypeScript + Vite + vanilla TS + vite-plugin-pwa.
 
-**Architecture** — A build-time-baked dataset of 174 species (traits + SVG sketches) drives a pure-function adaptive multi-trait identification engine, packaged as an offline PWA.
+**Architecture** — A build-time-baked dataset of 174 species (traits with their SVG sketches, plus 167 bundled Wikimedia Commons photos) drives a pure-function adaptive multi-trait identification engine, packaged as an offline PWA.
 
 **Local dev**
 
@@ -70,6 +71,6 @@ npm run dev
 | `npm run lint`       | ESLint (zero warnings)                |
 | `npm run type:check` | TypeScript type check                 |
 
-CI runs lint, type:check, tests, and the production build on every PR.
+CI runs format:check, lint, type:check, tests, and the production build on every PR.
 
 Open-source, MIT licensed. PRs welcome.
