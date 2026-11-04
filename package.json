@@ -21,10 +21,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^26.6.5",
-    "@typescript-eslint/eslint-plugin": "^8.72.0",
+    "@types/node": "^26.6.6",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
     "@typescript-eslint/parser": "^8.61.0",
-    "eslint": "^10.13.0",
+    "eslint": "^10.14.0",
     "husky": "^9.1.7",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5",
